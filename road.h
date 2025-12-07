@@ -1,10 +1,15 @@
 #ifndef ROAD_H
 #define ROAD_H
 
-class road
-{
+class Road {
+private:
+    int y_;         // posição vertical da rua
+    int height_;
 public:
-    road();
+    Road(int y = 100, int height = 100);
+
+    int y() const;
+    int height() const;
 };
 
-#endif // ROAD_H
+#endif

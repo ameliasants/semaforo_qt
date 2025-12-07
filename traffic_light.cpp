@@ -1,23 +1,26 @@
 #include "traffic_light.h"
 
-//traffic_light::traffic_light() {}
 TrafficLight::TrafficLight(TrafficLightState state)
-    : state_(state), duration_(0) {
-}
+    : state_(state) {}
 
+TrafficLightState TrafficLight::getState() const {
+    return state_;
+}
 
 void TrafficLight::setState(TrafficLightState state) {
     state_ = state;
 }
 
 void TrafficLight::changeState() {
-    // exemplo simples só para compilar
-    if (state_ == TrafficLightState::RED)
+    switch (state_) {
+    case TrafficLightState::RED:
         state_ = TrafficLightState::GREEN;
-    else
+        break;
+    case TrafficLightState::GREEN:
+        state_ = TrafficLightState::YELLOW;
+        break;
+    case TrafficLightState::YELLOW:
         state_ = TrafficLightState::RED;
-}
-
-int TrafficLight::getDuration() const {
-    return duration_;
+        break;
+    }
 }

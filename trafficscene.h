@@ -1,13 +1,15 @@
-
 #ifndef TRAFFICSCENE_H
 #define TRAFFICSCENE_H
 
 #include <QGraphicsScene>
 #include <QGraphicsItem>
 #include <QTimer>
+#include <QPen>
+#include <QBrush>
 #include "traffic_light.h"
+#include "car.h"
 
-    class TrafficScene : public QGraphicsScene {
+class TrafficScene : public QGraphicsScene {
     Q_OBJECT
 
 public:
@@ -22,7 +24,15 @@ private slots:
 
 private:
     QTimer *timer_;
-    TrafficLight *trafficLight_;
+    TrafficLight trafficLightModel_;
+    Car carModel_;
+
+    QGraphicsRectItem *carItem_;
+    QGraphicsRectItem *postItem_;
+    QGraphicsEllipseItem *lightItem_;
+    int elapsedMs_;
+
+    void updateTrafficLightColor();
 };
 
 #endif

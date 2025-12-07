@@ -1,26 +1,7 @@
-#ifndef TRAFFIC_LIGHT_H
-#define TRAFFIC_LIGHT_H
+#include "road.h"
 
-#include <string>
+Road::Road(int y, int height)
+    : y_(y), height_(height) {}
 
-enum class TrafficLightState {
-    RED,
-    YELLOW,
-    GREEN
-};
-
-class TrafficLight {
-private:
-    TrafficLightState state_;
-    int duration_;
-
-public:
-    TrafficLight(TrafficLightState state = TrafficLightState::RED);
-
-    TrafficLightState getState() const;
-    void setState(TrafficLightState state);
-    void changeState();
-    int getDuration() const;
-};
-
-#endif
+int Road::y() const { return y_; }
+int Road::height() const { return height_; }
