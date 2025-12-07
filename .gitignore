@@ -1,0 +1,43 @@
+# Pastas de build do Qt Creator
+build-*/
+*-build*/
+build/
+
+# Qt Creator user/session
+*.user
+*.user.*
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+.qtcreator/
+
+# Cache/temp
+*.autosave
+*.swp
+*.swo
+
+# Binários/artefatos
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+*.a
+*.lib
+*.pdb
+*.qmlc
+*.jsc
+
+# CMake/Ninja
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+.ninja_deps
+.ninja_log
