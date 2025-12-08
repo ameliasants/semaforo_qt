@@ -1,0 +1,8 @@
+{
+    "zona_escolar": {
+        "inicio": "07:30",
+        "fim": "08:30",
+        "tempo_verde_escolar": 45,
+        "tempo_verde_normal": 30
+    }
+}
