@@ -65,9 +65,4 @@ Para manter boas práticas de organização e modularização, os arquivos estã
 4. Os `Veiculo`s são atualizados ao longo do tempo, podendo ser priorizados conforme seu tipo (por exemplo, autocarro escolar) e condições de segurança dos alunos.
 5. Todas as informações relevantes (estado do semáforo, prioridade ativa, horário escolar) são exibidas no terminal.
 
-## Possíveis Extensões Futuras
 
-- Integração com interface gráfica em Qt para visualização da rua, faixa de pedestres e veículos.
-- Leitura real de ficheiro de configuração (`config.json`) para horários diferentes por escola.
-- Simulação de múltiplos cruzamentos com coordenação entre semáforos.
-- Integração com sensores físicos ou simulados (por exemplo, sockets ou mensagens de rede).
